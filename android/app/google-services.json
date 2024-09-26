@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "192858400322",
+    "project_id": "localvendor-d9351",
+    "storage_bucket": "localvendor-d9351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192858400322:android:f47f48521203f8a6bcefdb",
+        "android_client_info": {
+          "package_name": "com.localvendor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHDQlex0yJ1a92lnxU4wtTFswGU6ZK8DY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
