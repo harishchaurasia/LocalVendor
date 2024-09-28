@@ -1,7 +1,7 @@
 // src/screens/LoginScreen.tsx
 import React from 'react';
 import { View, Text } from 'react-native';
-import GoogleSignInButton from '../components/google_authButton';
+import GoogleSignInButton from '../components/GoogleSigninButton';
 
 const LoginScreen = () => {
   return (

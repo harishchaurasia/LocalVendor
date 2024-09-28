@@ -3,7 +3,7 @@ import auth from '@react-native-firebase/auth';
 
 // Configure Google Sign-In (do this when your app loads)
 GoogleSignin.configure({
-  webClientId: 'YOUR_WEB_CLIENT_ID.apps.googleusercontent.com',  // Replace with your Web Client ID from Firebase
+  webClientId: '192858400322-kbg94t6ppl42age48avcbsea1ob3v0qt.apps.googleusercontent.com',  // Replace with your Web Client ID from Firebase
 });
 
 // Sign-in function using Google Sign-In
