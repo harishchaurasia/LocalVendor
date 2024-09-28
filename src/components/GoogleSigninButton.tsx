@@ -3,6 +3,7 @@ import { Button, Text, View, StyleSheet } from 'react-native';
 import { signInWithGoogle, signOut } from '../services/firebase';
 import { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
+
 const GoogleSignInButton = () => {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
 

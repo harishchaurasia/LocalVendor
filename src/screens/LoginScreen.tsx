@@ -2,13 +2,16 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import GoogleSignInButton from '../components/GoogleSigninButton';
-
+import Bckgrnd from '../components/GradientBackground';
 const LoginScreen = () => {
   return (
-    <View>
-      <Text>Login to LocalVendor</Text>
-      <GoogleSignInButton />
-    </View>
+    <Bckgrnd>
+      <View>
+        <Text>Join</Text>
+        <Text>LocalVendor</Text>
+        <GoogleSignInButton />
+      </View>
+    </Bckgrnd>
   );
 };
 
