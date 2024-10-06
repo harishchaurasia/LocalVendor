@@ -33,6 +33,8 @@ const GoogleSignInButton = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={[styles.heading]}>Join</Text>
+      <Text style={styles.subHeading}>LocalVendor</Text>
       {user ? (
         <>
           <Text>Welcome, {user.displayName ? user.displayName : 'User'}</Text>
@@ -52,36 +54,46 @@ const GoogleSignInButton = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  googleButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#f0f0f0',
-    padding: 10,
-    borderRadius: 15,
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    elevation: 2,
-  },
-  googleIcon: {
-    width: 20,
-    height: 20,
-    marginRight: 12,
-    marginLeft: 10,
-  },
-  googleButtonText: {
-    fontSize: 16,
-    color: '#000',
-    marginHorizontal: 10,
-    marginVertical: 6,
-  },
-});
-
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'flex-start',
+      padding: 20,
+    },
+    heading: {
+      fontSize: 28,
+      fontWeight: 'bold',
+      marginBottom: 5,
+    },
+    subHeading: {
+      fontSize: 34,
+      marginBottom: 100,
+      textAlign: 'center',
+    },
+    googleButton: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#f0f0f0',
+      padding: 10,
+      borderRadius: 15,
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.3,
+      shadowRadius: 2,
+      elevation: 2,
+    },
+    googleIcon: {
+      width: 20,
+      height: 20,
+      marginRight: 12,
+      marginLeft: 10,
+    },
+    googleButtonText: {
+      fontSize: 16,
+      color: '#000',
+      marginHorizontal: 10,
+      marginVertical: 6,
+    },
+  });
+  
 export default GoogleSignInButton;
