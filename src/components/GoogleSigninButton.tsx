@@ -36,6 +36,7 @@ const GoogleSignInButton = () => {
       {user ? (
         <>
           <Text>Welcome, {user.displayName ? user.displayName : 'User'}</Text>
+          {/* res.redirect('/home') */}
           <Button title="Sign Out" onPress={handleSignOut} />
         </>
       ) : (
