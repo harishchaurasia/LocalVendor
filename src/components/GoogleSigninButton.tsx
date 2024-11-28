@@ -7,16 +7,28 @@ import {
   TouchableOpacity,
   Image,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import type {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {signInWithGoogle, signOut} from '../services/firebase';
 import {FirebaseAuthTypes} from '@react-native-firebase/auth';
 
+type RootStackParamList = {
+  HomeScreen: undefined;
+  // ... add other screens here
+};
+
 const GoogleSignInButton = () => {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+  // for debugging
+  console.log('Navigation:', navigation);
 
   const handleSignIn = async () => {
     try {
       const userInfo = await signInWithGoogle();
       setUser(userInfo.user);
+      navigation.navigate('HomeScreen'); // Navigate to the 'Home' screen after successful login
     } catch (error) {
       console.error('Error during Google Sign-In:', error);
     }
@@ -36,7 +48,6 @@ const GoogleSignInButton = () => {
       {user ? (
         <>
           <Text>Welcome, {user.displayName ? user.displayName : 'User'}</Text>
-          {/* res.redirect('/home') */}
           <Button title="Sign Out" onPress={handleSignOut} />
         </>
       ) : (

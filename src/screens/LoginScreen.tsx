@@ -1,9 +1,11 @@
 // src/screens/LoginScreen.tsx
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 import GoogleSignInButton from '../components/GoogleSigninButton';
 import Bckgrnd from '../components/GradientBackground';
-const LoginScreen = () => {
+import {NavigationProp} from '@react-navigation/native';
+
+const LoginScreen = ({navigation}: {navigation: NavigationProp<any>}) => {
   return (
     <Bckgrnd>
       <View>
